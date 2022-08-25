@@ -1,13 +1,195 @@
+@import url("https://use.typekit.net/qww6xzk.css");
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'sofia-pro', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+main {
+  background-color: #ffffff;
+  background-image: radial-gradient(
+      at 0% 30%,
+      hsla(316, 59%, 57%, 1) 0,
+      hsla(316, 89%, 67%, 0) 50%
+    ),
+    radial-gradient(
+      at 16% 60%,
+      hsla(319, 95%, 40%, 1) 0,
+      hsla(319, 85%, 54%, 0) 50%
+    ),
+    radial-gradient(at 50% 20%, #d261ee 0, hsla(192, 95%, 53%, 0) 50%),
+    radial-gradient(at 70% 30%, rgb(243, 76, 174) 0, hsla(128, 89%, 58%, 0) 50%),
+    radial-gradient(
+      at 88% 73%,
+      hsla(286, 89%, 70%, 1) 0,
+      hsla(226, 89%, 56%, 0) 50%
+    ),
+    radial-gradient(
+      at 40% 55%,
+      hsla(0, 91%, 68%, 1) 0,
+      hsla(165, 91%, 68%, 0) 50%
+    ),
+    radial-gradient(at 0% 48%, rgb(197, 7, 156) 0, hsla(169, 88%, 57%, 0) 50%),
+    radial-gradient(at 100% 96%, #8f0090 0, hsla(279, 92%, 64%, 0) 50%);
+  display: flex;
+  flex-direction: column;
+  width: 252px;
+  height: 270px;
+  position: relative;
+  border: 1px solid gray;
+}
+
+header {
+  background-color: #8f008f70;
+  display: flex;
+  width: 251px;
+  justify-content: space-around;
+  align-items: center;
+}
+.title {
+  position: relative;
+  opacity: 1;
+  display: flex;
+  height: 50px;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.titleText {
+  position: relative;
+  top: 5px;
+  height: 50px;
+  font-size: 22px;
+  margin: 5px;
+  color: #e8dbc5;
+}
+
+.titleText:hover {
+  filter: brightness(1.2);
+}
+
+.titleText:active {
+  filter: brightness(0.9);
+}
+
+.year {
+  position: relative;
+  font-size: 20px;
+  color: #ffc2e2;
+}
+
+.grid {
+  background: rgba(245, 211, 255, 0.36);
+  border-radius: 3px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.37);
+}
+.wkday {
+  flex-direction: row;
+  text-align: center;
+  color: #8f0090;
+  background-color: #ccccff70;
+  font-size: 12px;
+  margin-top: 0;
+  z-index: 4;
+}
+.week,
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.week {
+  margin: 2px 0;
+}
+
+.blank {
+  position: relative;
+}
+.day,
+.selected,
+.blank {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.day {
+  border: 3px solid rgba(0, 0, 0, 0);
+  color: #3a3238;
+}
+
+#today {
+  color: #6622cc;
+}
+
+#today:hover h5 {
+  filter: brightness(1.7);
+}
+
+.day:hover {
+  color: #8f008f;
+}
+.selected {
+  border: 3px solid #8f008f;
+  color: #8f008f;
+}
+h5 {
+  position: relative;
+  text-align: center;
+  bottom: 20px;
+}
+
+.monthList {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #fafbff40;
+  border: 1px solid #ffffff20;
+  border-radius: 3px;
+  backdrop-filter: blur(25px);
+  box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 10px;
+  top: 20%;
+  position: absolute;
+  list-style: none;
+  width: 250px;
+  z-index: 5;
+}
+.monthItem {
+  color: #8f008f;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 8px;
+  text-align: center;
+}
+
+.btn {
+  cursor: pointer;
+  color: #e8dbc5;
+  background-color: #ccccff15;
+  border: none;
+  border-inline: none;
+  z-index: 2;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+}
+.monthItem:hover {
+  filter: brightness(0.6);
+}
+
+.btn:active {
+  filter: brightness(0.8);
 }

@@ -1,8 +1,6 @@
-import logo from './logo.svg';
-import './index.css';
 import React, { useState} from "react";
 import { CalendarGrid } from "./grid";
-
+import './index.css'
 import { Heading } from "./header";
 
 
@@ -64,4 +62,3 @@ export default function Calendar() {
     </main>
   );
 }
-
